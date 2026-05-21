@@ -71,6 +71,12 @@ fi
 # Modular Config Files
 # =========================================================
 
+# Envs configuration
+source "$ZDOTDIR/envs.zsh"
+
+# Secrets configuration
+source "$ZDOTDIR/secrets.zsh"
+
 # fzf configuration
 source "$ZDOTDIR/fzf.zsh"
 
