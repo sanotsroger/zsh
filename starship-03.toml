@@ -71,8 +71,8 @@ Manjaro = "󰣇 " # Ícone do Manjaro (certifique-se de usar uma Nerd Font)
 [directory]
 style = "bg:#3b4252"
 format = "[ $path ]($style)"
-#truncation_length = 5
-#truncation_symbol = "…/"
+truncation_length = 5
+truncation_symbol = "…/"
 
 [directory.substitutions]
 "Documents" = " "
