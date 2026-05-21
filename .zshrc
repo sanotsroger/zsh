@@ -40,6 +40,9 @@ setopt NUMERIC_GLOB_SORT  # sort file10 after file9, not after file1
 # Initialize zoxide
 eval "$(zoxide init zsh)"
 
+# Shell integrations
+eval "$(fzf init zsh)" # Ctrl + r
+
 # =========================================================
 # Completion
 # =========================================================
