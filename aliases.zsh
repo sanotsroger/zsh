@@ -156,6 +156,7 @@ alias nplugins='$EDITOR $ZDOTDIR/plugins.zsh'
 alias nprompt='$EDITOR $ZDOTDIR/prompt.zsh'
 alias nenvs='$EDITOR $ZDOTDIR/envs.zsh'
 alias nsecrets='$EDITOR $ZDOTDIR/secrets.zsh'
+alias nstarship='$EDITOR $ZDOTDIR/starship.toml'
 
 # =========================================================
 # Copy/Remove files/dirs
