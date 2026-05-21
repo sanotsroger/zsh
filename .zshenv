@@ -28,4 +28,4 @@ export STARSHIP_CONFIG="$ZDOTDIR/starship.toml"
 
 # ---------- PATH ----------
 # Personal binaries/scripts
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.config/symfony-cli/bin:$PATH"
