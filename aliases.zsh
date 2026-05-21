@@ -2,7 +2,7 @@
 # Reload Bash
 # =========================================================
 
-alias zreload="source $$ZDOTDIR/.zshrc"
+alias zreload="source $ZDOTDIR/.zshrc"
 
 # =========================================================
 # Pacman for software managment
