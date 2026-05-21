@@ -9,10 +9,7 @@ disabled = false
 format = "[$symbol](#blue) "
 
 [os.symbols]
-Ubuntu = "󰕈"
-Arch = "󰣇"
-CachyOS = "󰣇"
-Macos = ""
+Manjaro = "󰣇"
 
 [directory]
 format = "[$path](cyan) "
