@@ -1,123 +1,59 @@
-# Replace the "❯" symbol in the prompt with "➜"
+# ~/.config/starship.toml
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Change command timeout from 500 to 1000 ms
+command_timeout = 1000
+
+# Change the default prompt format
+format = """\
+[╭╴](238)$os\
+$all[╰─](238)$character"""
+
+# Change the default prompt characters
 [character]
-success_symbol = "[➜](bold green)"
+success_symbol = '[➜](bold green)'
+error_symbol = "[➜](red)"
 
-# Use custom format
-format = """
-[┌───────────────────](bold green)
-[│](bold green)$directory$rust$package
-[└─>](bold green) """
-
-# Wait 10 milliseconds for starship to check files under the current directory.
-scan_timeout = 10
-
-[username]
-style_user = "green bold"
-style_root = "black bold"
-format = " [$user]($style) ~ "
+[os]
 disabled = false
+format = "[$symbol](white) "
+
+[os.symbols]
+Manjaro = "󰣇"
+
+# Shows the username
+[username]
+style_user = "white"
+style_root = "white"
+format = "[$user]($style) "
 show_always = true
 
-[cmd_duration]
-min_time = 500
-format = "took [$duration](bold yellow)"
+[hostname]
+ssh_only = false
+format = "on [$hostname](bold yellow) "
 
 [directory]
-format = "[$path]($style)[$read_only]($read_only_style) "
-style = "bold #f57800"
-read_only = "🔒"
-read_only_style = "red"
-
-[git_branch]
-format = "on [$symbol $branch ]($style)"
-symbol = " "
-style = "bold purple"
-
-[git_commit]
-#format = "[\\($hash\\)]($style) [\\($tag\\)]($style)"
-style = "bold green"
-
-[git_status]
-format = '([\[$all_status$ahead_behind\]]($style))'
-conflicted = "="
-ahead = "⇡${count} "
-behind = "⇣${count} "
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-untracked = "?${count} "
-stashed = "$${count} "
-modified = "!${count} "
-staged = "+${count} "
-renamed = "»${count} "
-deleted = "✘${count} "
-style = "bold red"
-disabled = false
-
-[git_state]
-rebase = "REBASING"
-merge = "MERGING"
-revert = "REVERTING"
-cherry_pick = "CHERRY-PICKING"
-bisect = "BISECTING"
-am = "AM"
-am_or_rebase = "AM/REBASE"
-style = "bold yellow"
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
-disabled = false
-
-[hg_branch]
-symbol = " "
-style = "bold purple"
-format = "on [$symbol$branch]($style) "
-
-[memory_usage]
-format = "via $symbol [${ram}( | ${ram_pct})]($style)"
-symbol = " "
-style = "bold dimmed green"
+truncation_length = 5
+truncation_symbol = "…/"
+home_symbol = " ~"
+read_only_style = "197"
+read_only = "  "
+format = "at [$path]($style)[$read_only]($read_only_style) "
 
 [nodejs]
-format = "via [$symbol$version]($style) "
-symbol = "⬢ "
-style = "bold green"
-disabled = false
-not_capable_style = "bold red"
-
-[status]
-format = "[$symbol$status]($style)"
-symbol = "✖"
-style = "bold red"
-disabled = true
-
-[battery]
-full_symbol = ""
-charging_symbol = ""
-discharging_symbol = ""
-
-[docker]
-symbol = " "
-
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
-
-[package]
-symbol = " "
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
-
-[python]
-symbol = " "
-
-[ruby]
-symbol = " "
+symbol = ""
+format = "[$symbol $version](green) "
 
 [rust]
-symbol = " "
+symbol = ""
+format = "[$symbol $version](red) "
 
-[swift]
-symbol = "ﯣ "
+[golang]
+symbol = ""
+format = "[$symbol $version](cyan) "
+
+[php]
+symbol = ""
+format = "[$symbol $version](purple) "
