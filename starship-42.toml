@@ -162,7 +162,7 @@ format = '[  $time ]($style)'
 
 [character]
 success_symbol = '[ 42 ➜ ](bold #39ff14)'
-error_symbol = '[ DON\'T PANIC ➜ ](bold red)'
+error_symbol = "[ DON'T PANIC ➜ ](bold red)"
 
 [cmd_duration]
 min_time = 500
