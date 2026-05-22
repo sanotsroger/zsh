@@ -24,7 +24,7 @@ fi
 export GPG_TTY=$(tty)
 
 # ---------- Starship ----------
-export STARSHIP_CONFIG="$ZDOTDIR/themes/starship.toml"
+export STARSHIP_CONFIG="$ZDOTDIR/themes/starship-halflife.toml"
 
 # ---------- PATH ----------
 # Personal binaries/scripts
