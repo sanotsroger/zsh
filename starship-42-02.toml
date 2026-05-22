@@ -1,0 +1,169 @@
+# The Hitchhiker's Guide to the Galaxy Theme - Marvin Edition
+# #5E00A0 Cosmic Purple (OS/User)
+# #0A0068 Galactic Blue (Directory)
+# #000000 Space Black (Git / Languages)
+# #FAC610 Guide Yellow (Time / Main Highlights)
+# #00FF99 Marvin Green (Success Indicators)
+
+#           _     _ 
+#  ______ _(_) __| |
+# |_  / _` | |/ _` |
+#  / / (_| | | (_| |
+# /___\__,_|_|\__,_|    zaid-hassan (Marvin-42 Mod)
+
+# ---------------------------------------------------------------
+format = """
+[░▒▓](#5E00A0)\
+$os\
+$username\
+[](bg:#0A0068 fg:#5E00A0)\
+$directory\
+[](fg:#0A0068 bg:#000000)\
+$git_branch\
+$git_status\
+$c\
+$python\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+$php\
+$docker_context\
+[](fg:#000000 bg:#FAC610)\
+$time\
+[ ](fg:#FAC610)\
+\n
+$cmd_duration\
+$character\
+"""
+
+[line_break]
+disabled = false
+
+[username]
+show_always = true
+style_user = "bg:#5E00A0 fg:#FAC610 bold"
+style_root = "bg:#9A348E fg:#ffffff"
+format = '[ $user ]($style)'
+disabled = false
+
+[os]
+style = "bg:#5E00A0 fg:#00FF99 bold" # Verde dos olhos do Marvin para destacar o OS
+disabled = false
+
+[os.symbols]
+Manjaro = "󰣇 "
+
+[directory]
+style = "bg:#0A0068 fg:#ffffff bold"
+format = "[ 󰠵 $path ]($style)" # Mantida a toalha espacial
+truncation_length = 99
+truncation_symbol = ""
+truncate_to_repo = false
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+# --- Bloco de Linguagens unificado no fundo Preto Espacial (#000000) ---
+[c]
+symbol = " "
+style = "bg:#000000 fg:#00FF99 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = " "
+style = "bg:#000000 fg:#00FF99 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#000000 fg:#FAC610 bold"
+format = '[ $symbol $context ]($style) $path'
+
+[elixir]
+symbol = " "
+style = "bg:#000000 fg:#00FF99 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#000000 fg:#00FF99 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = " "
+style = "bg:#000000 fg:#FAC610 bold" # Amarelo para destacar a branch no preto
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#000000 fg:#FAC610 bold"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#000000 fg:#00FF99 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#000000 fg:#00FF99 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#000000 fg:#00FF99 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#000000 fg:#00FF99 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = " "
+style = "bg:#000000 fg:#00FF99 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#000000 fg:#00FF99 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = " "
+style = "bg:#000000 fg:#00FF99 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[scala]
+symbol = " "
+style = "bg:#000000 fg:#00FF99 bold"
+format = '[ $symbol ($version) ]($style)'
+
+[php]
+symbol = " "
+style = "bg:#000000 fg:#00FF99 bold"
+format = '[ $symbol ($version) ]($style)'
+# ---------------------------------------------------------------------
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#FAC610 fg:#000000 bold" # Texto preto no fundo Amarelo Guia
+format = '[  $time ]($style)'
+
+[character]
+success_symbol = '[ 42 ➜ ](bold #00FF99)'      # Verde neon brilhante dos olhos do Marvin
+error_symbol = "[ DON'T PANIC ➜ ](bold red)" # O clássico aviso em vermelho vivo
+
+[cmd_duration]
+min_time = 500
+format = ' [$duration](bold #FAC610)'
